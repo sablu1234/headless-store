@@ -5,3 +5,6 @@ Woocommece Rest api docs => [https://developer.woocommerce.com/docs/apis/rest-ap
 postman setup of woo rest api use => https://prnt.sc/vadqD_ZozG8p
 
 deletet request => https://prnt.sc/NHHj1zFhuxmx
+
+
+signature create video time in youtube => source(https://www.youtube.com/watch?v=bLe3K1sYGvU&t=864s)
