@@ -10,6 +10,7 @@ import MyOrders from "./pages/MyOrders"
 import MyAccount from "./pages/MyAccount"
 import Auth from "./pages/Auth"
 import SingleProduct from './pages/SingleProduct'
+import './Api.js'
 
 function App() {
 
