@@ -11,8 +11,7 @@ const Home = () => {
 
     
     return<>
-        <div className='container'>
-            <div className="hero-banner">
+        <div className="hero-banner">
                 <img src={ mallImage } alt="Hero Banner" className="img-fluid" />
                 <div className="hero-text text-center" style={{ 
                     marginTop: "30px" 
@@ -52,7 +51,6 @@ const Home = () => {
                 </div>
             </div>
             </div>
-        </div>
   
     </>
 }

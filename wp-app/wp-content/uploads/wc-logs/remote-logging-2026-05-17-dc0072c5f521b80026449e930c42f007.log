@@ -1,0 +1,1 @@
+2026-05-17T14:25:39+00:00 ERROR [Wrapper function error] Error in get_site_transient: mysqli_real_connect(): (HY000/2002): No connection could be made because the target machine actively refused it CONTEXT: {"function":"get_site_transient","0":"woocommerce_new_version"}
