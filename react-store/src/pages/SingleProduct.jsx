@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { getSingleProductData } from '../Api.js'
 
-const SingleProduct = ({ setPageLoading }) => {
+const SingleProduct = ({ setPageLoading, onAddToCart }) => {
 
     const {id} = useParams()
     const [singleProduct, setSingleProduct] = useState({})
@@ -54,7 +54,7 @@ const SingleProduct = ({ setPageLoading }) => {
                 <div className="mb-4">
                 <h5>Category: { singleProduct.categories?.map( (singleCategory) => singleCategory.name ).join(", ") }</h5>
                 </div>
-                <button className="btn btn-primary mt-4" >
+                <button className="btn btn-primary mt-4" onClick={ () => onAddToCart(singleProduct) }>
                 Add to Cart
                 </button>
             </div>

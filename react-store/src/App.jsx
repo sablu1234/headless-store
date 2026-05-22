@@ -19,9 +19,16 @@ import { useState } from 'react'
 function App() {
 
   const[loader, setLoader] = useState(false)
+  const [cart, setCart] = useState([])
 
   const setPageLoading = (status) => {
     setLoader(status)
+  }
+
+  const addProductsToCart = (product) => {
+
+    product.quantity = 1
+    console.log(product)
   }
 
 
@@ -36,13 +43,13 @@ function App() {
 
           <Routes>
           <Route path='/' element={ <Home /> }/>
-          <Route path='/products' element={ <Products setPageLoading = { setPageLoading } /> }/>
+          <Route path='/products' element={ <Products onAddToCart = { addProductsToCart } setPageLoading = { setPageLoading } /> }/>
           <Route path='/cart' element={ <Cart /> }/>
           <Route path='/checkout' element={ <Checkout /> }/>
           <Route path='/my-orders' element={ <MyOrders /> }/>
           <Route path='/my-account' element={ <MyAccount /> }/>
           <Route path='/login' element={ <Auth /> }/>
-          <Route path='/product/:id' element={ <SingleProduct setPageLoading = { setPageLoading } /> }/>
+          <Route path='/product/:id' element={ <SingleProduct onAddToCart = { addProductsToCart } setPageLoading = { setPageLoading } /> }/>
         </Routes>
         </div>
 

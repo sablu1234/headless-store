@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { getAllProducts } from '../Api.js'
 
-const Products = ({ setPageLoading }) => {
+const Products = ({ setPageLoading, onAddToCart }) => {
 
     const navigate = useNavigate()
     const [products, setProducts] = useState([])
@@ -58,7 +58,7 @@ const Products = ({ setPageLoading }) => {
                                     __html: singleProduct?.description
                                  }}></p>
                                 <p className="card-text">Category: { singleProduct?.categories.map((category) => category.name).join(",") }</p>
-                                <button className="btn btn-primary" >
+                                <button className="btn btn-primary" onClick={ () => onAddToCart(singleProduct) }>
                                 Add to Cart
                                 </button>
                             </div>
